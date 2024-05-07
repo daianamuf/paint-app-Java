@@ -6,10 +6,16 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class FileManager {
-
-    public static void savePanelAsImage(JPanel panel, String path) throws IOException{
+private static String generateFilename(){
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
+    return "drawing_" + sdf.format(new Date()) + ".png";
+}
+    public static void savePanelAsImage(JPanel panel) throws IOException{
+        String path = generateFilename();
         int width = panel.getWidth();
         int height = panel.getHeight();
 

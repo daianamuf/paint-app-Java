@@ -10,6 +10,10 @@ public class Circle extends Shape{
         this.radius = radius;
     }
 
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
     @Override public void draw(Graphics g){
         g.setColor(color);
         g.fillOval(x, y, radius*2, radius*2);

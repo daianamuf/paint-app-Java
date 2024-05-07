@@ -11,6 +11,11 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
+    public void setDimensions(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
     @Override public void draw(Graphics g){
         g.setColor(color);
         g.fillRect(x, y, width, height);
